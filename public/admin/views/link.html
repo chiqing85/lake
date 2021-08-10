@@ -1,0 +1,104 @@
+<div class="certoverview link">
+	<h5 class="right-frame-title"> 友情链接</h5>
+	<div class="add">
+		<a href="#/link/add" class="button highlight middle">
+			<span> + 添加</span>
+		</a>
+	</div>
+	<div class="hljs">
+		<div class="block">
+			<table class="font-list">
+				<thead>
+					<tr>
+						<td>ID</td>
+						<td>网站名称</td>
+						<td>网站域名</td>
+						<td>显示</td>
+						<td>排序</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="id">1</td>
+						<td class="name">天籁小说</td>
+						<td class="url">https://www.hkxsw.cc</td>
+						<td class="radio">
+							<div class="form-group radio">
+							    <label>
+							        <input 
+							            name="fruit" 
+							            type="checkbox"
+							            checked="checked"
+							            value="1">
+						            <div class="checkbox-switch switch-open">
+						            	<span></span>
+						            </div>
+							    </label>
+							</div>
+						</td>
+						<td class="sorts">99</td>
+						<td>
+							<a href="javascript:;" class="button highlight small edit-link">
+								<span> 编辑</span>
+							</a>
+							<a href="javascript:;" class="button danger small delete">
+								<span> 删除</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>天籁小说</td>
+						<td>https://www.hkxsw.cc</td>
+						<td class="radio">
+							<div class="form-group radio">
+							    <label>
+							        <input 
+							            name="fruit" 
+							            type="checkbox" 
+							            value="1">
+						            <div class="checkbox-switch">
+						            	<span></span>
+						            </div>
+							    </label>
+							</div>
+						</td>
+						<td>99</td>
+						<td>
+							<a href="javascript:;" class="button highlight small edit-link">
+								<span> 编辑</span>
+							</a>
+							<a href="javascript:;" class="button danger small">
+								<span> 删除</span>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+.link .block .font-list td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.link input {
+	position: absolute;
+	height: 30px;
+}
+.input-wrap {
+    position: relative;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+</style>
+<script type="text/javascript">
+	if( e == undefined ) {
+		var e = new edit(".link a.button")
+		e.init()
+	}
+</script>

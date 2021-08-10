@@ -1,0 +1,151 @@
+body.load {
+    background: #fff;
+}
+header.header {
+  display: flex;
+  height: 50px;
+  padding: 0 60px;
+}
+
+header .logo.col-4 {
+    display: flex;
+    font-size: 0;
+    margin-right: 20px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+main.container {
+  width: 100%;
+  height: calc(100vh - 85px);
+  background: #1A2042;
+  background: #0C112A;
+}
+
+view.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 260px;
+    /* background-color: #fff; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: auto;
+}
+
+.certoverview {
+    width: 95%;
+    border-radius: 5px;
+    padding: 20px;
+    background: #1A2042;
+    position: relative;
+}
+.right-frame-title {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px #30375B solid;
+}
+.hljs {
+    padding: 10px;
+    border-radius: 5px;
+    background: #232B4C;
+}
+.add {
+    padding-bottom: .8rem;
+}
+table {
+    width: 100%;
+}
+.block .font-list thead td {
+    color: #999;
+}
+.block .font-list td {
+    padding: 5px 20px 5px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+td>a {
+    margin: 0 8px;
+}
+.comic td>a {
+    padding: 0 12px;
+    margin: 0 3px;
+}
+.comic .font-list td {
+    font-size: 12px;
+
+}
+.comic .button:hover:not(:disabled) {
+    box-shadow: #060916 0 0 11px;
+}
+.comic .font-list td {
+    padding: 10px 20px 10px 0;
+}
+.comic td.name,.comic td.reader {
+    color: #66b5ff!important;
+}
+.manage-title {
+    padding-bottom: 10px;
+    border-bottom: 1px #30375B solid;
+    color: #fff;
+}
+h2.h2-2 {
+    font-size: 20px;
+    display: inline-block;
+}
+.manage-title>span {
+    padding-left: 5px;
+    font-size: 12px;
+}
+.manage-box {
+    display: inline-block;
+    padding: 15px 5px;
+}
+.items {
+    float: left;
+    justify-items: center;
+    width: 30%;
+    padding: 10px 5px;
+}
+label.checkbox-checked {
+    display: inline-block;
+    margin: 0 5px 0;
+}
+label.checkbox-checked:before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #30375b;
+}
+label.checked::before {
+    border-color: #0084ff;
+}
+label.checkbox-checked.checked:after {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    content: "";
+    width: 0.15rem;
+    height: .28rem;
+    border: solid #0084ff;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate( 45deg );
+    transform: rotate( 45deg);
+}
+
+.manage .manage-box a.name {
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: sub;
+}

@@ -1,0 +1,210 @@
+{{ define "index/info.html" }}<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.c_title}}</title>
+    <link rel="stylesheet" href="/public/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/index/css/normalize.css">
+    <link rel="stylesheet" href="/public/index/css/base.css">
+    <link rel="stylesheet" href="/public/index/css/style.css">
+</head>
+<body id="comic">
+ {{template "index/header" .}}
+ <div class="banner_detail">
+     <div class="banner_border_bg">
+         <img src="https://img001.gdhczc.com/images/cover/201807/1530492617PHUdUt-RZEZ2p3ST.jpg" alt="" class="banner_detail_bg">
+     </div>
+     <div class="banner_detail_form">
+         <div class="cover">
+             <img src="https://img001.gdhczc.com/images/cover/201807/1530492617PHUdUt-RZEZ2p3ST.jpg" alt="">
+         </div>
+         <div class="info">
+             <div class="title">{{.c_title}}</div>
+             <div class="score">
+                <span>评分：</span>
+                <span class="score-c">
+                    <i class="icon icon-fav"></i>
+                    <i class="icon icon-fav"></i>
+                    <i class="icon icon-fav"></i>
+                    <i class="icon icon-fav"></i>
+                    <i class="icon icon-fav"></i>
+                </span>
+                <span class="score-sum">9.9</span>
+             </div>
+             <div class="comic-intro">
+                <span class="it">作者：噼咔噼</span>
+                <span class="it">状态：连载</span>
+                <span class="it">题材：热血 </span>
+                <span class="it">最近更新: 2021-07-24 18:13</span>
+             </div>
+             <div class="cur_rule"></div>
+             <div class="intro">
+                  《武炼巅峰》漫画版是由深圳漫画团队噼咔噼绘制，根据阅文集团旗起点中文网的同名小说改编，作者是莫默。武之巅峰，是孤独，是寂寞，是漫漫求索，是高处不胜寒。逆境中成长，绝地里求生，才能堪破武之极道。凌霄阁试炼弟子兼扫地小厮杨开偶获一本无字黑书，从此踏上漫漫武道。
+             </div>
+             <div class="works clearfix">
+                 <a href="javascript:;" class="bt btn-read">
+                    <i class="icon icon-read"></i>
+                    阅读
+                </a>
+                <a href="javascript:;" class="bt btn-fav">
+                    <i class="icon icon-fav"></i>
+                    收藏
+                </a>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="clearfix screen"></div>
+ <div class="chapterlist">
+     <section class="container">
+        <div class="ca_hot">
+            <span class="catalog-title">
+             章节列表
+            </span>
+            <div class="btn-sort">
+                <span class="dx">
+                    <i class="icon icon-switch">倒序</i>
+                </span>
+                <span class="zx">
+                    <i class="icon icon-switch">正序</i>
+                </span>
+            </div>
+        </div>
+          <div class="chapter_list clearfix">
+              <div class="chapter-box">
+                  <div class="item">
+                      <a href="/comic/4/1" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+              </div>
+          </div>
+     </section>
+ </div>
+ <div class="see">
+    <section class="container">
+        <h3 class="works-title-small">
+            看过《{{.c_title}}》的人还看过....
+        </h3>
+        <div class="see_list">
+            <div class="slide_item">
+                <div class="cover">
+                    <a href="/comic/2" alt="元尊">
+                        <img src="https://img001.gdhczc.com/images/cover/201807/1530492617tyeydrO2i_hk6knE.jpg" alt="元尊">
+                        <div class="banner-info">元尊</div>
+                    </a>
+                    <div class="cover_nav">第332话下 断龙城外</div>
+                </div>
+                <div class="comic_title"><a href="javascript:;">元尊</a></div>
+                <div class="auth">图：Dr.大吉,文：天蚕土豆</div>
+            </div>
+        </div>
+    </section>
+ </div>
+{{template "index/footer" .}}
+</body>
+</html>
+<script type="text/javascript" src="/public/jquery/jquery.min-3.2.1.js"></script>
+<script src="/public/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/public/index/js/lazyload.min.js"></script>
+<script src="/public/index/js/plug.js"></script>
+<script type="text/javascript" src="/public/index/js/app.js"></script>
+
+<script type="text/javascript">
+    //评分
+    var issco = 9.9;
+    $(".score i.icon:lt(" + Math.floor(issco/2) + ")").addClass("active")
+
+    $(".score i.icon").hover(function(e) {
+         $(".score i").removeClass("active")
+        var t = $(".score i.icon").index(this) + 1
+        $(".score i.icon:lt(" + t + ")").addClass("active")
+    },function() {
+        $(".score i").removeClass("active")
+        $(".score i.icon:lt(" + Math.floor(issco/2) + ")").addClass("active")
+    })
+    $(window).scroll(function() {
+        var p = $(this).scrollTop();
+        if( p > 5 ) {
+            $("header").css({"background":"rgb(255, 255, 255, "+ (p/50) +")",
+            "box-shadow":"rgb(0 0 0 / 10%) 0 2px 4px 0"
+            });
+        } else {
+            $("header").removeAttr("style");
+        }
+    })
+    $(".btn-sort").on("click", function() {
+        if( $(this).is(".active") == true ) 
+            $(this).removeClass("active")
+         else 
+            $(this).addClass("active")
+    })
+</script>
+{{ end }}

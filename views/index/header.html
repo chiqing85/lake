@@ -1,0 +1,79 @@
+{{define "index/header"}}
+<header class="header container-fluid">
+    <div class="container">
+        <!-- 左侧logo -->
+        <a href="/" class="h-logo">
+            <img src="/public/index/images/logo.png" alt="" class="logo">
+        </a>
+        <div class="header-nav">
+            <ul class="clearfix">
+                <li class="nav-item"><a href="/" class="">首页</a></li>
+                <li class="nav-item"><a href="javascript:;">更新</a></li>
+                <li class="nav-item"><a href="javascript:;">排行</a></li>
+                <li class="nav-item">
+                    <a href="javascript:;">
+                        <i class="icon icon-cat"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-search">
+            <input id="" type="search" placeholder="山海逆战" data-default="山海逆战" value="" autocomplete="off">
+            <i class="icon icon-search"></i>
+        </div>
+        <div class="header-bar">
+            <div class="clearfix">
+                <ul class="fl">
+                    <li class="moon" id="moon" title="日/夜">
+                        <a href="javascript:;">
+                            <i class="icon icon-moon"></i>
+                        </a>
+                    </li>
+                    <li class="msg">
+                        <a href="javascript:;" title="消息">
+                            <i class="glyphicon glyphicon-bell"></i>
+                        </a>
+                    </li>
+                    <li class="hover">
+                        <a href="javascript:;" title="历史">
+                            <i class="icon icon-clock"></i>
+                        </a>
+                        <div class="hover-list">
+                            <div class="block">
+                                <p class="title">我看过的<a href="javascript:removereads(0);">清除记录</a></p>
+                                <p class="login-title">登录后可同步云端阅读历史<a href="/login/" class="red">点击登录</a></p>
+                                <ul></ul>
+                                <a href="/comichistory/" class="bottom">全部历史(0)</a>
+                            </div>
+                            <div class="block">
+                                <img src="/public/index/images/readhistory-empty.png" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="collect">
+                        <a href="javascript:;" title="收藏">
+                            <i class="icon icon-fav"></i>
+                        </a>
+                    </li>
+                    <!-- 下载APP -->
+                    <li class="download">
+                        <a href="javascript:;" title="APP下载">
+                            <i class="icon icon-down"></i>
+                        </a>
+                    </li>
+                    <li class="edit">
+                        <a href="javascript:;" title="投稿">
+                            <i class="icon icon-edit"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_login">
+                <a href="javascript:;" class="header_login_btn">
+                    <i class="glyphicon glyphicon-user"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+{{ end }}

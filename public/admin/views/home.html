@@ -1,0 +1,93 @@
+<div class="certoverview">
+	<h5 class="right-frame-title"> 仪表盘</h5>
+	<div class="form-group" id="test">
+	   <!--  <input type="text" class="form-control" id="name" placeholder="请输入名称" v-model="name">
+	    name:{{name}} -->
+	  </div> 
+</div>
+<style type="text/css">
+p{
+	color: #fff;
+}
+</style>
+<script type="text/javascript">
+	/*class Vue{
+	    constructor(options){
+	        this.options = options;//传进来的参数
+	        this._data = this.options.data;//模范vue的_data
+	        this.complle();
+	    }
+	    // 渲染视图
+	    complle(){
+	        let ele = document.querySelector(this.options.el);//大节点
+	        this.compileNode(ele);
+	    }
+	    compileNode(ele){
+	        let childNodes = ele.childNodes;//得到所有子节点
+	        [...childNodes].forEach(node=>{
+	            if(node.nodeType === 3){//文本节点;
+	                let textContent = node.textContent; //dfasdf{{message}}sadfasd
+	                let reg = /\{\{\s*([^\s\{\}]+)\s*\}\}/g;
+	                if(reg.test(textContent)){//判断是否有正则匹配内容 -> test();
+	                    let $1 = RegExp.$1;//message
+
+
+	                    node.textContent = textContent.replace(reg,this._data[$1]);
+	                }
+
+
+	            }else if(node.nodeType === 1){//元素节点;
+	                if(node.childNodes.length>0){
+
+	                	 
+	                    this.compileNode(node);
+	                }
+	            }
+	        })
+	    }
+	}
+
+    let vm = new Vue({
+        el:"#test",
+        data:{
+            name:"测试数据",
+        }
+    });*/
+
+
+	/*var data = {}
+	data.name = "holle world"
+
+	let le = $("#test");
+	let textContent
+
+	r()*/
+    function r() {
+    	/*le.contents().each( (i, n ) => {
+    	 	if( n.nodeType === 3 ) {
+    	 		// n = n.substring(2,n.length-2);
+    	 		let reg = /\{\{\w+\}\}/g;
+    	 		if( reg.test( n.textContent )) {
+    	 			textContent = n.textContent
+    	 			let $1 = RegExp.$1;//message
+    	 			n.textContent = textContent.replace(reg, data.name);
+    	 		}
+    	 			
+    	 			/*if( textContent != undefined ) {
+    	 				// n.textContent = textContent.replace(reg, data.name);
+    	 			}
+    	 		}
+    	 	}else if( n.nodeType === 1 ) {
+    	 		if(n.childNodes.length>0){
+               	 this.compileNode(n);
+                }
+    	 	}
+    	 })*/
+
+		$('[v-model="name"').on("input propertychange", (e) => {
+			data.name = e.target.value
+			$.proxy( data,r())
+		}).val( data.name).focus()
+    }
+	
+</script>

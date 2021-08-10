@@ -1,0 +1,896 @@
+{{ define "index/m_index_s.html" }}<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.m_sitename}}_在线漫画_漫画大全_免费漫画在线看_最好看的漫画</title>
+    <meta content="在线漫画,好看的漫画,漫画大全,免费漫画,漫画在线看,手机看漫画,手机漫画" name="keywords" />
+    <meta content="漫画,在线漫画,漫画为大家带来最新漫画大全，这里有超多漫画资源，无论是韩国漫画，少女漫画，还是恐怖漫画，总有一个让你酣畅淋漓" name="keywords" />
+    <link rel="stylesheet" href="/public/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/index/css/normalize.css">
+    <link rel="stylesheet" href="/public/index/css/base.css">
+    <link rel="stylesheet" href="/public/index/css/style.css">
+</head>
+<body>
+    <!-- 页面头部 -->
+   {{template "index/header" .}}
+    <div class="search-banner">
+        <div class="container">
+            <div class="header-search">
+                <input id="txtKeywords" type="search" placeholder="山海逆战" data-default="山海逆战" value="" autocomplete="off">
+                <i class="icon icon-search"></i>
+            </div>
+        </div>
+    </div>
+    <!-- 分类 -->
+    <div class="full-class">
+        <div class="container">
+            <i class="icon icon-mh-lx"></i>
+            <ul class="list">
+                <li><a href="javascript:;">热血</a></li>
+                <li><a href="javascript:;">冒险</a></li>
+                <li><a href="javascript:;">魔法</a></li>
+                <li><a href="javascript:;">科幻</a></li>
+                <li><a href="javascript:;">奇幻</a></li>
+                <li><a href="javascript:;">运动</a></li>
+                <li><a href="javascript:;">历史</a></li>
+                <li><a href="javascript:;">战争</a></li>
+                <li><a href="javascript:;">恋爱</a></li>
+                <li><a href="javascript:;">后宫</a></li>
+                <li><a href="javascript:;">校园</a></li>
+                <li><a href="javascript:;">悬疑</a></li>
+                <li><a href="javascript:;">恐怖</a></li>
+                <li><a href="javascript:;">搞笑</a></li>
+                <li><a href="javascript:;">彩虹</a></li>
+            </ul>
+            <!-- <a href="/manhua-list/" class="full-class-btn">全部分类</a> -->
+        </div>
+    </div>
+    <!-- 第一屏 -->
+    <div class="first-screen">
+        <section class="container">
+            <!-- 轮播 -->
+            <!-- data-ride="carousel" -->
+            <div id="slidershow" class="carousel slide" data-ride="carousel"  data-interval='2500'>
+                <ol class="carousel-indicators">  
+                    <li data-target="#slidershow" data-slide-to="0" class="active"></li>  
+                    <li data-target="#slidershow" data-slide-to="1"></li>
+                    <li data-target="#slidershow" data-slide-to="2"></li>
+                </ol> 
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="/comic/1">
+                            <img class="lazyload" data-src="http://by98tel.cdndm5.com/86/2021/7/13/5d1b1bdb36164b34.jpg">
+                            <p class="title carousel-caption">都市至尊</p>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/comic/2">
+                            <img class="lazyload" data-src="http://by98tel.cdndm5.com/86/2021/7/13/8c61b33d0ae44d3e.jpg">
+                            <p class="title carousel-caption">绝世武神</p>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/comic/3">
+                            <img class="lazyload" data-src="/public/images/07562d62f3494a1f.jpg">
+                            <p class="title carousel-caption">重生空间：豪门辣妻不好惹</p>
+                        </a>
+                    </div>
+                  </div>
+            </div>
+            <div class="screen-wrap">
+                <div class="screen-box">
+                    <div class="col-xs-6">
+                        <a href="/comic/4">
+                            <img class="lazyload" data-src="http://by98tel.cdndm5.com/86/2021/7/19/97371f89db784f0f.jpg">
+                            <p class="title carousel-caption">桃花宝典</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-6">
+                        <a href="/comic/5">
+                            <img class="lazyload" data-src="http://by98tel.cdndm5.com/86/2021/7/19/8ce9331cf477494a.jpg">
+                            <p class="title carousel-caption">驭灵师</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="screen-box">
+                    <div class="col-xs-4">
+                        <a href="/comic/6">
+                            <img class="lazyload" data-src="http://by98tel.cdndm5.com/86/2021/7/19/2d0000310ed94e41.jpg">
+                            <p class="title carousel-caption">极品辣妈不好惹</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="/comic/7">
+                            <img class="lazyload" data-src="  http://by98tel.cdndm5.com/86/2021/7/19/e7fdd5b440614ac5.jpg">
+                            <p class="title carousel-caption">重生之慕甄</p>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="/comic/8">
+                            <img class="lazyload" data-src="http://by98tel.cdndm5.com/86/2021/7/19/cba1b7c9e9c64803.jpg">
+                            <p class="title carousel-caption">万古神王</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- 推荐 -->
+    <div class="recom-wrap c3">
+        <section class="container">
+            <i class="icon icon-hot icon-f"></i>
+            <div class="hot-title">热门推荐</div>
+            <span class="hot-ib">要是错过了，肯定会后悔一辈子的~</span>
+            <a href="javascript:;" class="hot-more">更多
+                <i class="icon icon-right"></i>
+            </a>
+        </section>
+        <div class="wrap-box container">
+            <div class="list">
+                <div class="box-item">
+                    <div class="cover">
+                        <a href="javascript:;">
+                            <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/61/60420/20200618103408_180x240.jpg" alt="修仙者大战超能力">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h1 class="title">
+                            <a href="javascript:;" title="修仙者大战超能力">
+                                修仙者大战超能力
+                            </a>
+                        </h1>
+                        <div class="tip-star star-4"></div>
+                        <p class="author">作者：一号奶粉</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第103回 吓死的">第103回 吓死的</a>
+                        </p>
+                        <div class="desc">
+                            修仙大陆有一位大能者，意外穿越到了现代英雄社会，在...
+                        </div>
+                        <div class="tag">
+                            <a href="javascript:;">
+                                <span>热血</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>科幻</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>机甲</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="cover">
+                        <a href="javascript:;">
+                            <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/61/60420/20200618103408_180x240.jpg" alt="修仙者大战超能力">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h1 class="title">
+                            <a href="javascript:;" title="修仙者大战超能力">
+                                修仙者大战超能力
+                            </a>
+                        </h1>
+                        <div class="tip-star star-4"></div>
+                        <p class="author">作者：一号奶粉</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第103回 吓死的">第103回 吓死的</a>
+                        </p>
+                        <div class="desc">
+                            修仙大陆有一位大能者，意外穿越到了现代英雄社会，在...
+                        </div>
+                        <div class="tag">
+                            <a href="javascript:;">
+                                <span>热血</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>科幻</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>机甲</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="cover">
+                        <a href="javascript:;">
+                            <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/61/60420/20200618103408_180x240.jpg" alt="修仙者大战超能力">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h1 class="title">
+                            <a href="javascript:;" title="修仙者大战超能力">
+                                修仙者大战超能力
+                            </a>
+                        </h1>
+                        <div class="tip-star star-4"></div>
+                        <p class="author">作者：一号奶粉</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第103回 吓死的">第103回 吓死的</a>
+                        </p>
+                        <div class="desc">
+                            修仙大陆有一位大能者，意外穿越到了现代英雄社会，在...
+                        </div>
+                        <div class="tag">
+                            <a href="javascript:;">
+                                <span>热血</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>科幻</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>机甲</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="cover">
+                        <a href="javascript:;">
+                            <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/61/60420/20200618103408_180x240.jpg" alt="修仙者大战超能力">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h1 class="title">
+                            <a href="javascript:;" title="修仙者大战超能力">
+                                修仙者大战超能力
+                            </a>
+                        </h1>
+                        <div class="tip-star star-4"></div>
+                        <p class="author">作者：一号奶粉</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第103回 吓死的">第103回 吓死的</a>
+                        </p>
+                        <div class="desc">
+                            修仙大陆有一位大能者，意外穿越到了现代英雄社会，在...
+                        </div>
+                        <div class="tag">
+                            <a href="javascript:;">
+                                <span>热血</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>科幻</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>机甲</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="cover">
+                        <a href="javascript:;">
+                            <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/61/60420/20200618103408_180x240.jpg" alt="修仙者大战超能力">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h1 class="title">
+                            <a href="javascript:;" title="修仙者大战超能力">
+                                修仙者大战超能力
+                            </a>
+                        </h1>
+                        <div class="tip-star star-4"></div>
+                        <p class="author">作者：一号奶粉</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第103回 吓死的">第103回 吓死的</a>
+                        </p>
+                        <div class="desc">
+                            修仙大陆有一位大能者，意外穿越到了现代英雄社会，在...
+                        </div>
+                        <div class="tag">
+                            <a href="javascript:;">
+                                <span>热血</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>科幻</span>
+                            </a>
+                            <a href="javascript:;">
+                                <span>机甲</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <!-- 上升最快 -->
+    <div class="up-wrap c6">
+        <section class="container">
+            <i class="icon icon-up icon-f"></i>
+            <div class="hot-title">上升最快</div>
+            <span class="hot-ib">超人气漫画，不容错过~</span>
+            <a href="javascript:;" class="hot-more">更多
+                <i class="icon icon-right"></i>
+            </a>
+        </section>
+        <div class="wrap-box container">
+            <div class="list">
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                        </h1>
+                        <p class="uptime">07-21 11:37</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                                    <span class="tip-star star-3"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：有田イマリ </span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                                </p>
+                                <div class="desc">时隔20年召开的同窗会，大家各自谈论着自己这些年的经历，... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                        </h1>
+                        <p class="uptime">07-21 11:37</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                                    <span class="tip-star star-3"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：有田イマリ </span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                                </p>
+                                <div class="desc">时隔20年召开的同窗会，大家各自谈论着自己这些年的经历，... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                        </h1>
+                        <p class="uptime">07-21 11:37</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                                    <span class="tip-star star-3"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：有田イマリ </span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                                </p>
+                                <div class="desc">时隔20年召开的同窗会，大家各自谈论着自己这些年的经历，... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                        </h1>
+                        <p class="uptime">07-21 11:37</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm7tel.cdndm5.com/65/64084/20201031221616_180x240_19.jpg" alt="是欺凌者有错、还是被欺凌者有错？">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="是欺凌者有错、还是被欺凌者有错？">是欺凌者有错、还是被欺凌者有错？</a>
+                                    <span class="tip-star star-3"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：有田イマリ </span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第132回 无尽火域（上）">第132回 无尽火域（上）</a>
+                                </p>
+                                <div class="desc">时隔20年召开的同窗会，大家各自谈论着自己这些年的经历，... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="归海">归海</a>
+                        </h1>
+                        <p class="uptime">今天 17:13更新</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="归海">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="归海">归海</a>
+                                    <span class="tip-star star-4"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：星际互娱</span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                                </p>
+                                <div class="desc">龙宫最小的龙子稀饭没想到，自己居然会被逼着去向一个凡人... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="归海">归海</a>
+                        </h1>
+                        <p class="uptime">今天 17:13更新</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="归海">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="归海">归海</a>
+                                    <span class="tip-star star-4"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：星际互娱</span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                                </p>
+                                <div class="desc">龙宫最小的龙子稀饭没想到，自己居然会被逼着去向一个凡人... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="归海">归海</a>
+                        </h1>
+                        <p class="uptime">今天 17:13更新</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="归海">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="归海">归海</a>
+                                    <span class="tip-star star-4"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：星际互娱</span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                                </p>
+                                <div class="desc">龙宫最小的龙子稀饭没想到，自己居然会被逼着去向一个凡人... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="card-pic">
+                        <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                    </div>
+                    <div class="item-detali">
+                        <h1 class="title">
+                            <a href="javascript:;" title="归海">归海</a>
+                        </h1>
+                        <p class="uptime">今天 17:13更新</p>
+                        <p class="chapter">
+                            <span>最新：</span>
+                            <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                        </p>
+                    </div>
+                    <!-- 移入放大 -->
+                    <div class="tip-wrap">
+                        <div class="item-tip">
+                            <a href="javascript:;" title="归海">
+                                <div class="tip-img">
+                                    <img class="lazyload" data-src="http://mhfm8tel.cdndm5.com/66/65947/20210114140019_180x240.jpg" alt="归海">
+                                </div>
+                            </a>
+                            <div class="item-tip-detali">
+                                <h2 class="title">
+                                    <a href="javascript:;" title="归海">归海</a>
+                                    <span class="tip-star star-4"></span>
+                                </h2>
+                                <p class="author">
+                                    <span>作者：星际互娱</span>
+                                </p>
+                                <p class="chapter">
+                                    <span>最新：</span>
+                                    <a href="javascript:;" title="第33回 突然发狂">第33回 突然发狂</a>
+                                </p>
+                                <div class="desc">龙宫最小的龙子稀饭没想到，自己居然会被逼着去向一个凡人... </div>
+                                <a href="javascript:;" class="btn">开始阅读</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 完本 -->
+    <div class="end-wrap c9">
+        <section class="container">
+            <i class="icon icon-end icon-f"></i>
+            <div class="hot-title">完本佳作</div>
+            <span class="hot-ib">一口气读完，爽到爆~</span>
+            <a href="javascript:;" class="hot-more">更多
+                <i class="icon icon-right"></i>
+            </a>
+        </section>
+        <div class="wrap-box container">
+            <div class="box-left">
+                <div class="item-box">
+                    <a href="javascript:;">
+                        <img data-src="https://image.zymkcdn.com/file/cover/000/000/001.jpg" alt="" class="pic lazyload">
+                    </a>
+                </div>
+                <div class="info">
+                    <h1 class="title"><a href="javascript:;">龙王的人鱼新娘</a></h1>
+                    <div class="desc">他是选择族人还是爱情呢？</div>
+                </div>
+            </div>
+            <div class="box-right">
+                <div class="comic-box">
+                    <div class="item">
+                        <div class="item-wrap">
+                            <a href="javascript:;" class="adapt-mh">
+                                <img data-src="https://cms.samanlehua.com/cms/chenglu/62061ee0-a72c-11eb-9947-31bb94f846cb.png-noresize.webp" alt="" class="pic lazyload">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <h1 class="title"><a href="javascript:;">兽宠女皇</a></h1>
+                            <div class="desc">夜店歌手穿越到兽界做女皇</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-wrap">
+                            <a href="javascript:;" class="adapt-mh">
+                                <img data-src="https://cms.samanlehua.com/cms/chenglu/62061ee0-a72c-11eb-9947-31bb94f846cb.png-noresize.webp" alt="" class="pic lazyload">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <h1 class="title"><a href="javascript:;">兽宠女皇</a></h1>
+                            <div class="desc">夜店歌手穿越到兽界做女皇</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-wrap">
+                            <a href="javascript:;" class="adapt-mh">
+                                <img data-src="https://cms.samanlehua.com/cms/chenglu/62061ee0-a72c-11eb-9947-31bb94f846cb.png-noresize.webp" alt="" class="pic lazyload">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <h1 class="title"><a href="javascript:;">兽宠女皇</a></h1>
+                            <div class="desc">夜店歌手穿越到兽界做女皇</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-wrap">
+                            <a href="javascript:;" class="adapt-mh">
+                                <img data-src="https://cms.samanlehua.com/cms/chenglu/62061ee0-a72c-11eb-9947-31bb94f846cb.png-noresize.webp" alt="" class="pic lazyload">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <h1 class="title"><a href="javascript:;">兽宠女皇</a></h1>
+                            <div class="desc">夜店歌手穿越到兽界做女皇</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-wrap">
+                            <a href="javascript:;" class="adapt-mh">
+                                <img data-src="https://cms.samanlehua.com/cms/chenglu/62061ee0-a72c-11eb-9947-31bb94f846cb.png-noresize.webp" alt="" class="pic lazyload">
+                            </a>
+                        </div>
+                        <div class="info">
+                            <h1 class="title"><a href="javascript:;">兽宠女皇</a></h1>
+                            <div class="desc">夜店歌手穿越到兽界做女皇</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 最近更新 -->
+    <div class="clock-wrap c1">
+        <section class="container">
+            <i class="icon icon-clock icon-f"></i>
+            <div class="hot-title">最近更新</div>
+            <span class="hot-ib">地球人的节奏怎么那么快~~</span>
+            <a href="javascript:;" class="hot-more">更多
+                <i class="icon icon-right"></i>
+            </a>
+        </section>
+        <div class="wrap-box container">
+            <div class="list comic-new">
+               <div class="item active">
+                   <div class="item-box">
+                       <span class="num"> 1 </span>
+                       <span class="comic"><a href="javascript:;">斗破苍穹</a></span>
+                       <span class="chapter"><a href="javascript:;">898话 古妖</a></span>
+                       <span class="time">2021.07.24</span>
+                   </div>
+                   <div class="item-info">
+                       <span class="num"> 1 </span>
+                       <a href="javascript:;" class="cover">
+                           <img data-src="https://image.zymkcdn.com/file/cover/000/000/001.jpg-300x400" alt="" class="pic lazyload">
+                       </a>
+                       <div class="info-box">
+                           <p class="title">
+                               <a href="javascript:;">斗破苍穹</a>
+                           </p>
+                           <div class="desc">
+                               斗破苍穹漫画是根据著名作家天蚕土豆作品斗破苍穹改编的漫画，这是一个属于斗气的世界，没有花俏艳丽的魔法，有的，仅仅是繁衍到巅峰的斗气！在斗气大陆上，真正的强者都是用实力说话的！
+                           </div>
+                           <div class="chapter">
+                               <span>最新：</span>
+                               <a href="javascript:;">898话 古妖</a>
+                           </div>
+                       </div>
+                       <div class="time">2021.07.24</div>
+                   </div>
+               </div>
+               <div class="item">
+                   <div class="item-box">
+                       <span class="num"> 2 </span>
+                       <span class="comic"><a href="javascript:;">斗破苍穹</a></span>
+                       <span class="chapter"><a href="javascript:;">898话 古妖</a></span>
+                       <span class="time">2021.07.24</span>
+                   </div>
+                   <div class="item-info">
+                       <span class="num"> 2 </span>
+                       <a href="javascript:;" class="cover">
+                           <img data-src="https://image.zymkcdn.com/file/cover/000/000/001.jpg-300x400" alt="" class="pic lazyload">
+                       </a>
+                       <div class="info-box">
+                           <p class="title">
+                               <a href="javascript:;">斗破苍穹</a>
+                           </p>
+                           <div class="desc">
+                               斗破苍穹漫画是根据著名作家天蚕土豆作品斗破苍穹改编的漫画，这是一个属于斗气的世界，没有花俏艳丽的魔法，有的，仅仅是繁衍到巅峰的斗气！在斗气大陆上，真正的强者都是用实力说话的！
+                           </div>
+                           <div class="chapter">
+                               <span>最新：</span>
+                               <a href="javascript:;">898话 古妖</a>
+                           </div>
+                       </div>
+                       <div class="time">2021.07.24</div>
+                   </div>
+               </div>
+               <div class="item">
+                   <div class="item-box">
+                       <span class="num"> 3 </span>
+                       <span class="comic"><a href="javascript:;">斗破苍穹</a></span>
+                       <span class="chapter"><a href="javascript:;">898话 古妖</a></span>
+                       <span class="time">2021.07.24</span>
+                   </div>
+                   <div class="item-info">
+                       <span class="num"> 3 </span>
+                       <a href="javascript:;" class="cover">
+                           <img data-src="https://image.zymkcdn.com/file/cover/000/000/001.jpg-300x400" alt="" class="pic lazyload">
+                       </a>
+                       <div class="info-box">
+                           <p class="title">
+                               <a href="javascript:;">斗破苍穹</a>
+                           </p>
+                           <div class="desc">
+                               斗破苍穹漫画是根据著名作家天蚕土豆作品斗破苍穹改编的漫画，这是一个属于斗气的世界，没有花俏艳丽的魔法，有的，仅仅是繁衍到巅峰的斗气！在斗气大陆上，真正的强者都是用实力说话的！
+                           </div>
+                           <div class="chapter">
+                               <span>最新：</span>
+                               <a href="javascript:;">898话 古妖</a>
+                           </div>
+                       </div>
+                       <div class="time">2021.07.24</div>
+                   </div>
+               </div>
+               <div class="item">
+                   <div class="item-box">
+                       <span class="num"> 4 </span>
+                       <span class="comic"><a href="javascript:;">元尊</a></span>
+                       <span class="chapter"><a href="javascript:;">第334话上 混沌光环</a></span>
+                       <span class="time">2021.07.25</span>
+                   </div>
+                   <div class="item-info">
+                       <span class="num"> 4 </span>
+                       <a href="javascript:;" class="cover">
+                           <img data-src="https://img001.gdhczc.com/images/cover/201807/1530492617tyeydrO2i_hk6knE.jpg" alt="" class="pic lazyload">
+                       </a>
+                       <div class="info-box">
+                           <p class="title">
+                               <a href="javascript:;">元尊</a>
+                           </p>
+                           <div class="desc">
+                               2017年12月5日上线，每周二、四、六、日更新。此漫画由天蚕土豆热门小说《元尊》改编。少年执笔，龙蛇舞动；劈开乱世，点亮苍穹。气掌乾坤的世界里，究竟是蟒雀吞龙，还是圣龙崛起？！
+                           </div>
+                           <div class="chapter">
+                               <span>最新：</span>
+                               <a href="javascript:;">第334话上 混沌光环</a>
+                           </div>
+                       </div>
+                       <div class="time">2021.07.25</div>
+                   </div>
+               </div>
+               <div class="item">
+                   <div class="item-box">
+                       <span class="num"> 5 </span>
+                       <span class="comic"><a href="javascript:;">元尊</a></span>
+                       <span class="chapter"><a href="javascript:;">第334话上 混沌光环</a></span>
+                       <span class="time">2021.07.25</span>
+                   </div>
+                   <div class="item-info">
+                       <span class="num"> 5 </span>
+                       <a href="javascript:;" class="cover">
+                           <img data-src="https://img001.gdhczc.com/images/cover/201807/1530492617tyeydrO2i_hk6knE.jpg" alt="" class="pic lazyload">
+                       </a>
+                       <div class="info-box">
+                           <p class="title">
+                               <a href="javascript:;">元尊</a>
+                           </p>
+                           <div class="desc">
+                               2017年12月5日上线，每周二、四、六、日更新。此漫画由天蚕土豆热门小说《元尊》改编。少年执笔，龙蛇舞动；劈开乱世，点亮苍穹。气掌乾坤的世界里，究竟是蟒雀吞龙，还是圣龙崛起？！
+                           </div>
+                           <div class="chapter">
+                               <span>最新：</span>
+                               <a href="javascript:;">第334话上 混沌光环</a>
+                           </div>
+                       </div>
+                       <div class="time">2021.07.25</div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <!-- 友情链接 -->
+    <div class="friends">
+        <section class="container">
+            <p class="title">友情链接：</p>
+            <ul class="clearfix">
+                <li class="friend-link">
+                    <a href="https://www.tlai.cc">天籁小说</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    {{template "index/footer" .}}
+</body>
+</html>
+<script type="text/javascript" src="/public/jquery/jquery.min-3.2.1.js"></script>
+<script src="/public/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/public/index/js/lazyload.min.js"></script>
+<script src="/public/index/js/plug.js"></script>
+<script type="text/javascript" src="/public/index/js/app.js"></script>
+{{ end }}

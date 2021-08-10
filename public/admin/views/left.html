@@ -1,0 +1,76 @@
+<div class="nav-left">
+	<div class="menu">
+		<ul></ul>
+	</div>
+</div>
+
+
+<style>
+	main {
+	    position: absolute;
+	    left: -260px;
+	    top: 85px;
+	    right: 0;
+	    bottom: 0;
+        padding: 10px 60px 20px;
+        color: #fff;
+	    transition: all .2s ease-in-out !important;
+	    -moz-transition: all .2s ease-in-out !important;
+	    -webkit-transition: all .2s ease-in-out !important;
+	    -o-transition: all .2s ease-in-out;
+	    -o-transition: all .2s ease-in-out;
+	}
+	view.sidebar{
+		position: relative;
+	    width: 200px;
+	    display: inline-block;
+	    height: 100%;
+	    vertical-align: top;
+	}
+	.nav-left {
+	    position: relative;
+	    width: 200px;
+	    display: flex;
+	    -moz-flex-direction: column;
+	    -o-flex-direction: column;
+	    flex-direction: column;
+	    height: 100%;
+	    vertical-align: top;
+	    transition: all .2s cubic-bezier(.4,0,.2,1);
+	    overflow-x: hidden;
+	}
+	.menu {
+	    font-size: 14px;
+	}
+	.menu_item {
+	    margin-top: 5px;
+		padding-left: 20px;
+		padding-top: 6px;
+	    padding-bottom: 6px;
+	    display: flex;
+	    border-radius: 5px;
+	    align-items: flex-start;
+	}
+	a.menu_item>i {
+	    padding: 0 5px;
+	}
+	li.active>a.menu_item {
+        background: -webkit-linear-gradient(left,#0084FF,#66b5ff);
+	}
+   
+</style>
+
+<script type="text/javascript">
+	// 加载菜单
+	new menu().add( "./menu.js " ).then( m => {
+		let me = m.menu;
+		let li = me.map( item => {
+			return `<li><a class="menu_item" href="#${item['p']}"><i class="${item['i']}"></i>${item['t']}</a></li>`;
+		})
+		$(".menu>ul").html(li.join(''));
+		$("main").css("left", 0)
+
+		let hash = location.hash.slice(1) || '/';
+		$('[href="#'+ hash +'"]').parent().addClass("active");
+	});
+</script>

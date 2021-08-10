@@ -1,0 +1,62 @@
+{{ define "admin/login.html" }}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.webname}}</title>
+    <link rel="stylesheet" type="text/css" href="/public/admin/css/eadmin.min.css">
+</head>
+<body id="login">
+ <div class="block-box">
+        <div class="block">
+            <form action="/login" method="POST" data-callback="loginCallback">
+                <div class="main-title"><img src="/public/admin/img/mm-logo.png" alt=""> </div>
+                <div class="sub-title">
+                    -- 后台管理系统 --
+                </div>
+                <!-- 表单组盒子 -->
+                <div class="form-group">
+                    <input 
+                        name="uname" 
+                        type="text" 
+                        placeholder="请输入账号：" 
+                        autocomplete="off"
+                        data-validate="require" 
+                        data-validate-msg="请输入账号"
+                    >
+                </div>
+                <!-- 表单组盒子 -->
+                <div class="form-group">
+                    <input 
+                        name="pword" 
+                        type="password" 
+                        autocomplete="off"
+                        placeholder="请输入密码：" 
+                        data-validate="require" 
+                        data-validate-msg="请输入密码"
+                    >
+                </div>
+                <!-- 表单组盒子 -->
+                <div class="form-group">
+                   
+                </div>
+                <button 
+                    class="highlight" 
+                    data-loading="登录中..." 
+                    data-submit>登 录</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/public/jquery/jquery.min-3.2.1.js"></script>
+<script>
+    $("button.highlight").on("click", function (e) {
+        e.preventDefault()
+        let data = $("form").serialize()
+        $.post($("form").attr("action"), data, function (e ) {
+            console.log( e )
+        })
+    })
+</script>
+{{ end }}

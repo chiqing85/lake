@@ -1,0 +1,75 @@
+<div class="certoverview add_link">
+	<div class="block-title">
+		<span></span>
+		添加友链
+		<a href="javascript:;" class="history">
+			返回
+			<i class="ri-arrow-go-back-line"></i>
+		</a>
+	</div>
+	<div class="form-box">
+		<form action="/">
+			<input type="hidden" name="_token" value="">
+			<div class="tab-content">
+				<div class="form-group">
+					<div class="input-label-group">
+						<label class="InputName">友链名称</label>
+						<input type="text" placeholder="友链名称" name="name">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-label-group">
+						<label class="InputName">友情链接</label>
+						<input type="text" placeholder="友情链接" name="url">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-label-group">
+						<label class="InputName">LOGO</label>
+						<div id="upload" class="dropzone dropzone-mini dz-clickable">
+							<div class="dz-message dz-mini">
+								<i class="ri-image-add-line"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-label-group">
+						<label class="InputName">排序</label>
+						<input type="text" placeholder="排序" name="sorts">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-label-group">
+						<label class="InputName">状态</label>
+						<div class="form-group radio">
+						    <label>
+						        <input 
+						            name="fruit" 
+						            type="radio" 
+						            value="1">
+					            <div class="checkbox-switch switch-open">
+					            	<span></span>
+					            </div>
+						    </label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group form-item-content">
+					<label class="InputName"></label>
+					<a href="javascript:;" class="button highlight middle">提交</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<input type="file" class="dz-hidden-input" accept=".jpg,.gif,.png,.jpeg" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;">
+
+<style>
+	input {
+		width: 90%;
+	}
+</style>

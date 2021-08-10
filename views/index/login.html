@@ -1,0 +1,34 @@
+{{ define "index/login.html" }}<div class="layer-shade"></div>
+<div class="login-wrap">
+	<main class="login-main">
+		<div class="login-header">
+			<h1 class="title">用户登录</h1>
+			<a href="javascript:;">
+				<i class="icon icon-close login-close"></i>
+			</a>
+			
+		</div>
+		<div class="acgn-login">
+			<div class="form-wrap">
+				<div class="input-block name">
+					<input type="text" name="username" class="form-control" placeholder="手机号码／用户名">
+				</div>
+
+				<div class="input-block pas">
+					<input type="password" name="pas" class="form-control" placeholder="密码">
+				</div>
+
+				<div class="input-block">
+					<div class="captcha">
+						<div class="tcaptcha-icon"></div>
+						<p class="tcaptcha-text">点击验证</p>
+					</div>
+				</div>
+			</div>
+			<div class="login-bt">
+				<a href="javascript:;">登录</a>
+			</div>
+		</div>
+	</main>
+</div>
+{{ end }}

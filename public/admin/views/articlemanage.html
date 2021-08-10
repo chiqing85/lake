@@ -1,0 +1,86 @@
+<div class="certoverview manage">
+	<div class="block-title">
+		<span></span>
+		文章管理
+		<a href="javascript:;" class="history">
+			返回
+			<i class="ri-arrow-go-back-line"></i>
+		</a>
+	</div>
+	<div class="hljs">
+		<div class="manage-title">
+			<h2 class="h2-2">道界天下</h2>
+			<span> 章节目录</span>
+		</div>
+		<div class="manage-box">
+			<div class="items">
+				<label for="" class="checkbox-checked">
+					<input type="checkbox" name="chapterid[]" value="1">
+				</label>
+				<a href="javascript:;" class="name">1.扫地小厮</a>
+				<a href="javascript:;">[ 编 ]</a>
+				<a href="javascript:;">[ 删 ]</a>
+			</div>
+			<div class="items">
+				<label for="" class="checkbox-checked">
+					<input type="checkbox" name="chapterid[]" value="1">
+				</label>
+				<a href="javascript:;" class="name">2.撞破南墙不话头（一）</a>
+				<a href="javascript:;">[ 编 ]</a>
+				<a href="javascript:;">[ 删 ]</a>
+			</div>
+			<div class="items">
+				<label for="" class="checkbox-checked">
+					<input type="checkbox" name="chapterid[]" value="1">
+				</label>
+				<a href="javascript:;" class="name">3.撞破南墙不话头（二）</a>
+				<a href="javascript:;">[ 编 ]</a>
+				<a href="javascript:;">[ 删 ]</a>
+			</div>
+			<div class="items">
+				<label for="" class="checkbox-checked">
+					<input type="checkbox" name="chapterid[]" value="1">
+				</label>
+				<a href="javascript:;" class="name">4.撞破南墙不话头（三）</a>
+				<a href="javascript:;">[ 编 ]</a>
+				<a href="javascript:;">[ 删 ]</a>
+			</div>
+			<div class="items">
+				<label for="" class="checkbox-checked">
+					<input type="checkbox" name="chapterid[]" value="1">
+				</label>
+				<a href="javascript:;" class="name">5.黑书（上）</a>
+				<a href="javascript:;">[ 编 ]</a>
+				<a href="javascript:;">[ 删 ]</a>
+			</div>
+			<div class="items">
+				<label for="" class="checkbox-checked">
+					<input type="checkbox" name="chapterid[]" value="1">
+				</label>
+				<a href="javascript:;" class="name">5.黑书（下）</a>
+				<a href="javascript:;">[ 编 ]</a>
+				<a href="javascript:;">[ 删 ]</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	$(document).on("click","label", function() {
+		var i = $(this).find("input");
+		if( i.prop("checked") ) {
+			i.attr("checked", false)			
+			$(this).removeClass("checked" )
+		} else {
+			i.attr("checked", true)
+			$(this).addClass("checked");
+		}
+	})
+
+
+
+
+
+	var articleid = $.param("id")
+	console.log( articleid )
+</script>

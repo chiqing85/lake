@@ -1,0 +1,197 @@
+{{ define "index/reader.html" }}<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.c_title}}</title>
+    <link rel="stylesheet" href="/public/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/index/css/normalize.css">
+    <link rel="stylesheet" href="/public/index/css/base.css">
+    <link rel="stylesheet" href="/public/index/css/style.css">
+</head>
+<body id="reader">
+    <div class="reader-header">
+        <div class="read_header_top">
+            <div class="container">
+                <a href="/" class="h-logo">
+                    <img src="/public/index/images/logo.png" alt="" class="logo">
+                </a>
+                <div class="comic_title">
+                    <a href="/" class="">首页</a>
+                    <i class="icon icon-right"></i>
+                    <a href="/comic/4">武炼巅峰</a>
+                    <i class="icon icon-right"></i>
+                    <span>1.扫地小厮</span>
+                </div>
+                <div class="header-bar">
+                    <div class="clearfix">
+                        <ul class="fl">
+                            <li class="moon" id="moon">
+                                <a href="javascript:;">
+                                    <i class="icon icon-moon"></i>
+                                </a>
+                            </li>
+                            <li class="msg">
+                                <a href="javascript:;">
+                                    <i class="glyphicon glyphicon-bell"></i>
+                                </a>
+                            </li>
+                            <li class="hover">
+                                <a href="javascript:;">
+                                    <i class="icon icon-clock"></i>
+                                </a>
+                                <div class="hover-list">
+                                    <div class="block">
+                                        <p class="title">我看过的<a href="javascript:removereads(0);">清除记录</a></p>
+                                        <p class="login-title">登录后可同步云端阅读历史<a href="/login/" class="red">点击登录</a></p>
+                                        <ul></ul>
+                                        <a href="/comichistory/" class="bottom">全部历史(0)</a>
+                                    </div>
+                                    <div class="block">
+                                        <img src="/public/index/images/readhistory-empty.png" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collect">
+                                <a href="javascript:;">
+                                    <i class="icon icon-fav"></i>
+                                </a>
+                            </li>
+                            <!-- 下载APP -->
+                            <!-- <li class="download">
+                                <a href="javascript:;">
+                                    <i class="icon icon-down"></i>
+                                </a>
+                            </li> -->
+                            <li class="edit">
+                                <a href="javascript:;">
+                                    <i class="icon icon-edit"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header_login">
+                        <a href="javascript:;" class="header_login_btn">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="container">
+            <div class="rd-wr clearfix">
+                <div id="pic" class="rd-pic">
+                    <img src="https://img001.gdhczc.com/images/comic/254/506586/2069d9aee0.jpg!page-800" alt="" data-original="">
+                </div>
+                <div id="pic" class="rd-pic">
+                    <img src="https://img001.gdhczc.com/images/comic/254/506586/204830ce92.jpg!page-800" alt="" data-original="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="read_tool_bottom">
+        <section class="container read_bottom">
+            <div class="rightToolBar">
+                <a href="javascript:;">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                    <span class="tool_title">上一章</span>
+                </a>
+                <a href="javascript:;">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                    <span class="tool_title">下一章</span>
+                </a>
+                <a href="javascript:;">
+                    <i class="icon icon-list"></i>
+                    <span class="tool_title">目录</span>
+                </a>
+            </div>
+            <div class="chapters">
+                <h1> 目录</h1>
+                <div class="chap_list">
+                    <div class="scroll-warp">
+                        <div class="item">
+                      <a href="/comic/4/1" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="1.扫地小厮">1.扫地小厮</a>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;" class="chapter-link" title="2.撞破南墙不话头（一）">2.撞破南墙不话头（一）</a>
+                  </div>
+                  <div class="item">
+                       <a href="javascript:;" class="chapter-link" title="3.撞破南墙不话头（二）">3.撞破南墙不话头（二）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="4.撞破南墙不话头（三）">4.撞破南墙不话头（三）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（上）">5.黑书（上）</a>
+                  </div>
+                  <div class="item">
+                      <a href="javascript:;" class="chapter-link" title="5.黑书（下）">5.黑书（下）</a>
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="/public/jquery/jquery.min-3.2.1.js"></script>
+<script src="/public/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/public/index/js/lazyload.min.js"></script>
+<script src="/public/index/js/plug.js"></script>
+<script type="text/javascript" src="/public/index/js/app.js"></script>
+{{ end }}
