@@ -7,8 +7,8 @@ import (
 	"log"
 	"os"
 )
-var DB *gorm.DB
-func Mysqli() {
+
+func Mysqli() *gorm.DB {
 	dsn := os.Getenv("DBNAME") + ":" + os.Getenv("DBPASS") + "@tcp(" + os.Getenv("DBHOST") +
 		":" + os.Getenv("DBPORT") + ")/" + os.Getenv("DBDATABASE") + "?charset=" + os.Getenv("DBCHARSET") +
 		"&parseTime=True&loc=Local"
@@ -19,10 +19,8 @@ func Mysqli() {
 		},
 	}); err != nil {
 		log.Fatal("数据库连接失败……")
+		return nil
 	} else {
-		sqlDB, _ := db.DB()
-		sqlDB.Ping()
-		defer sqlDB.Close()
-		DB = db
+		return db
 	}
 }

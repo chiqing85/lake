@@ -1,6 +1,7 @@
 package admin
 
 import (
+	"example.com/m/v2/lake"
 	"example.com/m/v2/mode"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -16,10 +17,11 @@ func Login(c *gin.Context)  {
 		uname := c.PostForm("uname")
 		pword := c.PostForm("pword")
 		if u, bool := mode.Login(uname); bool {
-			if u.Password == pword {
+			if u.Pass == lake.Sha( pword ) {
 				c.JSON(http.StatusOK, gin.H{
 					"msg":"登录成功…",
 				})
+				return
 			}
 			c.JSON( http.StatusNotFound, gin.H{
 				"msg":"密码错误…",

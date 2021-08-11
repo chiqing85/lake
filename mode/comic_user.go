@@ -7,11 +7,14 @@ import (
 type ComicUser struct {
 	Id int
 	Uname string
-	Password string
+	Pass string
 }
 func Login(uname string) (*ComicUser, bool) {
+	db := lake.Mysqli()
+	sqlDB, _ := db.DB()
+	defer sqlDB.Close()
 	var user ComicUser
-	lake.DB.Where("Uname = ?", uname).Take( &user)
+	db.Where("Uname = ?", uname).Take( &user)
 	if user.Id != 0 {
 		return &user, true
 	} else {

@@ -58,7 +58,10 @@ $("button.highlight").on("click",  function (e) {
     if (!next()) return false;
     let data = $("form").serialize()
     $.post($("form").attr("action"), data, function (e ) {
-        console.log( e )
+         let h = `<div class="notice animated faster fadeInRight"><i class="title-icon ri-checkbox-circle-fill success" style="top:12px;"></i><i class="ri-close-line close"></i><div class="box" style="margin-left:32px"><div class="notice-title">${e.msg}</div></div></div>`;
+        $("#notice").append( h )
+        setTimeout(function(){self.location ="/" }, 1000);
+       
     }).fail(e => {
         if( e.status == 404 ) {
             let h = `<div class="notice animated faster fadeInRight"><i class="title-icon ri-close-circle-fill error" style="top:12px;"></i><i class="ri-close-line close"></i><div class="box" style="margin-left:32px"><div class="notice-title">${e.responseJSON.msg}</div></div></div>`;

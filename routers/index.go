@@ -18,5 +18,7 @@ func Index() *gin.Engine {
 	r.GET("/chptcha", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index/chptcha.html",gin.H{})
 	})
+
+
 	return r
 }

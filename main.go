@@ -1,7 +1,6 @@
 package main
 
 import (
-	"example.com/m/v2/lake"
 	_ "example.com/m/v2/lake"
 	"example.com/m/v2/routers"
 	"github.com/gin-gonic/gin"
@@ -13,7 +12,7 @@ func  static(c *gin.Engine) *gin.Engine {
 	return c
 }
 func init()  {
-	lake.Mysqli()
+	// lake.Mysqli()
 }
 func main() {
 	// 前端
