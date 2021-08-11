@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <title>{{.webname}}</title>
     <link rel="stylesheet" type="text/css" href="/public/admin/css/eadmin.min.css">
+    <link rel="stylesheet" href="/public/remixicon/fonts/remixicon.css">
 </head>
 <body id="login">
- <div class="block-box">
+    <div class="block-box">
         <div class="block">
             <form action="/login" method="POST" data-callback="loginCallback">
                 <div class="main-title"><img src="/public/admin/img/mm-logo.png" alt=""> </div>
@@ -21,8 +22,8 @@
                         type="text" 
                         placeholder="请输入账号：" 
                         autocomplete="off"
-                        data-validate="require" 
-                        data-validate-msg="请输入账号"
+                        data-validate="require"
+                        data-validate-msg="请输入账号……"
                     >
                 </div>
                 <!-- 表单组盒子 -->
@@ -33,7 +34,7 @@
                         autocomplete="off"
                         placeholder="请输入密码：" 
                         data-validate="require" 
-                        data-validate-msg="请输入密码"
+                        data-validate-msg="请输入密码……"
                     >
                 </div>
                 <!-- 表单组盒子 -->
@@ -47,16 +48,33 @@
             </form>
         </div>
     </div>
+    <div id="notice" style="top:50px;"> </div>
 </body>
 </html>
 <script src="/public/jquery/jquery.min-3.2.1.js"></script>
 <script>
-    $("button.highlight").on("click", function (e) {
-        e.preventDefault()
-        let data = $("form").serialize()
-        $.post($("form").attr("action"), data, function (e ) {
-            console.log( e )
-        })
+$("button.highlight").on("click",  function (e) {
+    e.preventDefault()
+    if (!next()) return false;
+    let data = $("form").serialize()
+    $.post($("form").attr("action"), data, function (e ) {
+        console.log( e )
+    }).fail(e => {
+        if( e.status == 404 ) {
+            let h = `<div class="notice animated faster fadeInRight"><i class="title-icon ri-close-circle-fill error" style="top:12px;"></i><i class="ri-close-line close"></i><div class="box" style="margin-left:32px"><div class="notice-title">${e.responseJSON.msg}</div></div></div>`;
+            $("#notice").append( h )
+            setTimeout(function(){ $(".animated:first").css("right", "-1000px")}, 2000);
+            setTimeout(function(){$(".animated:first").remove()}, 2300);
+        }
     })
+})
+
+function next() {
+    let u = $("input[name=uname]")
+    let p = $("input[name=pword]")
+    if (!u.val())  u.addClass("error-input"); else u.removeClass("error-input");
+    if (!p.val())  p.addClass("error-input"); else p.removeClass("error-input");
+    if( !u.val( ) || !p.val()) return false; else return true;
+}
 </script>
 {{ end }}
