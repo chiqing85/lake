@@ -7,7 +7,6 @@ import (
 	"log"
 	"os"
 )
-
 func Mysqli() *gorm.DB {
 	dsn := os.Getenv("DBNAME") + ":" + os.Getenv("DBPASS") + "@tcp(" + os.Getenv("DBHOST") +
 		":" + os.Getenv("DBPORT") + ")/" + os.Getenv("DBDATABASE") + "?charset=" + os.Getenv("DBCHARSET") +

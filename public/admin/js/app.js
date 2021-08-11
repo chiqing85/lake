@@ -12,11 +12,18 @@ class route {
 	refresh() {
 		let hash = location.hash.slice(1) || '/';
 		let tmlp = this.routes[hash];
-
 		if( tmlp == undefined ) tmlp = this.exeu( hash);
-
+		
 		this.templateCache.put( tmlp ).then( v => {
 			$(this.e).html(v)
+			// 中间件
+			var f = hash.substring(1);
+			try {
+				if( $.isFunction( window.$[f] )) {
+					window.$[f]()
+				}
+			} catch (e) {}
+			return false
 		});
 	}
 

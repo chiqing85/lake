@@ -11,6 +11,6 @@ func Admin() *gin.Engine {
 	r.GET("/", admin.Index)
 	r.GET("/login", admin.Login)
 	r.POST("/login", admin.Login)
-	r.GET("/setting", admin.Setting)
+	r.POST("/setting", admin.Setting)
 	return r
 }

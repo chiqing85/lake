@@ -73,4 +73,13 @@
 			return this;
 		},
 	})
+
+	$.setting = function() {
+		$.post("/setting", e => {
+			console.log( e.system)
+		})
+	}
+	$.link = function() {
+		console.log( "link" )
+	}
 })(jQuery)

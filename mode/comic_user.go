@@ -11,8 +11,9 @@ type ComicUser struct {
 }
 func Login(uname string) (*ComicUser, bool) {
 	db := lake.Mysqli()
-	sqlDB, _ := db.DB()
-	defer sqlDB.Close()
+	mysqldb, _ := db.DB()
+	defer mysqldb.Close()
+
 	var user ComicUser
 	db.Where("Uname = ?", uname).Take( &user)
 	if user.Id != 0 {
