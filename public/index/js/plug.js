@@ -62,6 +62,7 @@
 
 	slider.prototype = {
 		init:function() {
+			this.Getcapt()
 			var $this = this;
 			// 点击按下
 			$(this.e).on("mousedown",function(event) {
@@ -85,8 +86,18 @@
 
 		Move:function( e) {
 			if( e.clientX - this.StartLeft > -1 && e.clientX - this.StartLeft < this.MaxLeft) {
-				$(this.e).css({ "left": e.clientX - this.StartLeft})
+				let l = e.clientX - this.StartLeft
+				$(this.e).css({ "left": l})
+				$(".tc-jpp>img").css( { "left": l})
 			}
+		},
+		Getcapt:function() {
+			$.get("http://admin.mmiao.com/captcha", function( e) {
+				$(".tc-jpp>img").css({"top":e.oy, "left":0})
+				r = Math.random();
+				$(".captcha-img>img").attr("src", "/public/img/captcha.jpg?"+ r)
+				$(".tc-jpp>img").attr("src", "/public/img/hycdn.png?" + r)
+			})
 		}
 	}
 	window.slider = slider;

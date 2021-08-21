@@ -8,5 +8,6 @@ import (
 func Mobile() *gin.Engine {
 	r := gin.Default()
 	r.GET("/", mobile.Index)
+
 	return r
 }

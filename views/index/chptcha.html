@@ -70,10 +70,19 @@
 	    background: #00a3ee;
 	    transform: translateX(-50%) translateY(-50%);
 	}
+	.tc-jpp>img {
+	    position: absolute;
+	    top: 64px;
+	    left: 0px;
+	    z-index: 2;
+	}
 </style>
 <div class="captcha-mobile">
+	<div class="tc-jpp">
+		<img alt="">
+	</div>
 	<div class="captcha-img">
-		<img src="/public/images/ver-2.png" alt="">
+		<img alt="">
 	</div>
 	<div class="action-icon">
 		<a href="javascript:;"><i class="glyphicon glyphicon-repeat"></i></a>
@@ -88,5 +97,14 @@
 <script type="text/javascript">
 	var ChptchaSlider = new slider( ".bt-slider");
 	ChptchaSlider.init();
+	$(".action-icon>a").on("click", function() {
+		$.get("http://admin.mmiao.com/captcha", function( e) {
+			r = Math.random();
+			$(".captcha-img>img").attr("src", "/public/img/captcha.jpg?"+ r)
+			$(".tc-jpp>img").attr("src", "/public/img/hycdn.png?" + r)
+			$(".tc-jpp>img").css({"top":e.oy, "left":0})
+			$(".bt-slider").css("left", 0)
+		})
+	})
 </script>
 {{ end }}
