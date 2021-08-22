@@ -53,7 +53,7 @@
 	var slider  = function( e, s) {
 		this.e = e;
 		this.isok = false;
-		this.StartLeft = 0
+		this.StartLeft = 0;
 
 		if( $("div").is( this.e) ) {
 			this.MaxLeft = $(this.e).siblings().width() - $(this.e).width() * 0.38;
@@ -72,6 +72,7 @@
 			}).on("mousemove", function(event) {	// 拖动鼠标
 				if( this.isok ) $this.Move( event);
 			}).on("mouseup", function(event) { // 松开鼠标
+				$this.Postcapt( event);
 				if( this.isok ) this.isok = false;
 			}).on("mouseout", function() {
 				if( this.isok ) this.isok = false;
@@ -98,6 +99,33 @@
 				$(".captcha-img>img").attr("src", "/public/img/captcha.jpg?"+ r)
 				$(".tc-jpp>img").attr("src", "/public/img/hycdn.png?" + r)
 			})
+		},
+		Postcapt:function(e) {
+			/*$.post("/captcha",function(e) {
+				// true
+				// false
+			})*/
+
+			if( e.clientY) {
+
+				if( false ) {
+					$(".tc-jpp>img").addClass("lake-jpp-img")
+					$("p.errno").css("opacity", 1);
+					setTimeout(function(){$(".tc-jpp>img").removeClass("lake-jpp-img");$("p.errno").css("opacity", 0)},600);
+					this.Getcapt()
+				} else {
+					// $(".captcha-img").append("<div class='success'>验证成功！！！</div>")
+				}
+				
+
+				/*if( e.clientX - this.StartLeft ) {
+					console.log( 11)
+				} else {
+					$(".bt-slider").css( "left",0)
+					this.Getcapt()
+				}*/
+			}
+
 		}
 	}
 	window.slider = slider;

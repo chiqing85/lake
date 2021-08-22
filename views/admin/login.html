@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{.webname}}</title>
+    <link rel="stylesheet" href="/public/bootstrap-3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/public/admin/css/eadmin.min.css">
     <link rel="stylesheet" href="/public/remixicon/fonts/remixicon.css">
 </head>
@@ -55,6 +56,16 @@
 </body>
 </html>
 <style>
+.close {
+    font-size: 15px;
+    color: unset;
+    text-shadow:unset ;
+    opacity: 1;
+}
+.close:focus, .close:hover {
+    color: unset;
+
+}
 .captcha {
     position: relative;
     border: 1px solid #30375B;
@@ -138,6 +149,7 @@ p.tcaptcha-text {
 }
 </style>
 <script src="/public/jquery/jquery.min-3.2.1.js"></script>
+<script src="/public/index/js/plug.js"></script>
 <script>
 $("button.highlight").on("click",  function (e) {
     e.preventDefault()
@@ -147,13 +159,9 @@ $("button.highlight").on("click",  function (e) {
          let h = `<div class="notice animated faster fadeInRight"><i class="title-icon ri-checkbox-circle-fill success" style="top:12px;"></i><i class="ri-close-line close"></i><div class="box" style="margin-left:32px"><div class="notice-title">${e.msg}</div></div></div>`;
         $("#notice").append( h )
         setTimeout(function(){self.location ="/" }, 1000);
-       
     }).fail(e => {
         if( e.status == 404 ) {
-            let h = `<div class="notice animated faster fadeInRight"><i class="title-icon ri-close-circle-fill error" style="top:12px;"></i><i class="ri-close-line close"></i><div class="box" style="margin-left:32px"><div class="notice-title">${e.responseJSON.msg}</div></div></div>`;
-            $("#notice").append( h )
-            setTimeout(function(){ $(".animated:first").css("right", "-1000px")}, 2000);
-            setTimeout(function(){$(".animated:first").remove()}, 2300);
+            err( e.responseJSON.msg);
         }
     })
 })
@@ -161,9 +169,10 @@ $("button.highlight").on("click",  function (e) {
 function next() {
     let u = $("input[name=uname]")
     let p = $("input[name=pword]")
-    if (!u.val())  u.addClass("error-input"); else u.removeClass("error-input");
-    if (!p.val())  p.addClass("error-input"); else p.removeClass("error-input");
-    if( !u.val( ) || !p.val()) return false; else return true;
+    if (!u.val())  err("帐户不能为空…");
+    if (!p.val())  err("密码不能为空…"); else  if( p.val().length < 5) err("密码少于5位字符…");
+
+    if( !u.val( ) || !p.val() || p.val().length < 5) return false; else return true;
 }
 $(".tcaptcha-icon").on("click", function(){
     if (!next()) return false;
@@ -173,5 +182,12 @@ $(".tcaptcha-icon").on("click", function(){
         $this.parent().append(c)
     })
 })
+
+function err( err) {
+    let h = `<div class="notice animated faster fadeInRight"><i class="title-icon ri-close-circle-fill error" style="top:12px;"></i><i class="ri-close-line close"></i><div class="box" style="margin-left:32px"><div class="notice-title">${err}</div></div></div>`;
+    $("#notice").append( h )
+    setTimeout(function(){ $(".animated:first").css("right", "-1000px")}, 2000);
+    setTimeout(function(){$(".animated:first").remove()}, 2300);
+}
 </script>
 {{ end }}
